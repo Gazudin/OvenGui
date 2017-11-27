@@ -1,4 +1,9 @@
-package com.company;
+package view;
+
+import controller.OvenController;
+import com.company.OvenEvent;
+import model.OvenModel;
+import com.company.OvenModelObserver;
 
 import javax.swing.*;
 import java.awt.*;

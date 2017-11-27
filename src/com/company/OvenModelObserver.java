@@ -1,5 +1,7 @@
 package com.company;
 
+import model.OvenModel;
+
 /**
  * Created by Marcel on 27.11.2017.
  */

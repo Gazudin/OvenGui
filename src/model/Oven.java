@@ -1,4 +1,7 @@
-package com.company;
+package model;
+
+import com.company.OvenModelObserver;
+import model.OvenModel;
 
 import java.util.ArrayList;
 import java.util.List;

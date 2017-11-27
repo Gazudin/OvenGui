@@ -1,4 +1,6 @@
-package com.company;
+package model;
+
+import com.company.OvenModelObserver;
 
 /**
  * Created by Marcel on 27.11.2017.

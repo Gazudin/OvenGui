@@ -1,4 +1,6 @@
-package com.company;
+package states;
+
+import states.OvenState;
 
 /**
  * Created by Marcel on 27.11.2017.

@@ -1,4 +1,8 @@
-package com.company;
+package controller;
+
+import com.company.OvenEvent;
+import controller.OvenController;
+import model.OvenModel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +20,7 @@ public class GeradeausController implements OvenController {
                 if(ovenModel.isDoorOpen()){
                     ovenModel.setLamp(false);
                     ovenModel.setDoor(false);
-                }else {
+                }else{
                     ovenModel.setLamp(true);
                     ovenModel.setHeating(false);
                     ovenModel.setDoor(true);

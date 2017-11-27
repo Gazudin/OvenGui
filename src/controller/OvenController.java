@@ -1,4 +1,7 @@
-package com.company;
+package controller;
+
+import com.company.OvenEvent;
+import model.OvenModel;
 
 /**
  * Created by Marcel on 27.11.2017.

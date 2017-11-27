@@ -1,4 +1,4 @@
-package com.company;
+package states;
 
 /**
  * Created by Marcel on 27.11.2017.

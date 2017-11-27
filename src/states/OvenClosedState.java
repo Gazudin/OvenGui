@@ -1,9 +1,9 @@
-package com.company;
+package states;
 
 /**
  * Created by Marcel on 27.11.2017.
  */
-public class OvenOpenState implements OvenState {
+public class OvenClosedState implements OvenState {
     @Override
     public void doAction() {
 
