@@ -29,7 +29,8 @@ public class GeradeausController implements OvenController {
                     Timer timer = new Timer(6000, new ActionListener() {
                         public void actionPerformed(final ActionEvent e) {
                             handleEvent(OvenEvent.STOP);
-                        }});
+                        }
+                    });
                     timer.start();
                 }
                 break;
