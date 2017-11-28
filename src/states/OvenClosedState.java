@@ -8,4 +8,9 @@ public class OvenClosedState implements OvenState {
     public void doAction() {
 
     }
+
+    @Override
+    public void door() {
+
+    }
 }

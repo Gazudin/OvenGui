@@ -20,7 +20,7 @@ public class StatePatternBasedController implements OvenController {
                 if(ovenModel.isDoorOpen()){
                     ovenModel.setLamp(false);
                     ovenModel.setDoor(false);
-                }else {
+                }else{
                     ovenModel.setLamp(true);
                     ovenModel.setHeating(false);
                     ovenModel.setDoor(true);

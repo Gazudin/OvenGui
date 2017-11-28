@@ -21,4 +21,9 @@ public class OvenContext implements OvenState {
     public void doAction() {
         this.state.doAction();
     }
+
+    @Override
+    public void door() {
+
+    }
 }

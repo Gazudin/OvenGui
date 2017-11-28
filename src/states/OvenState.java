@@ -5,4 +5,5 @@ package states;
  */
 public interface OvenState {
     public void doAction();
+    public void door();
 }
