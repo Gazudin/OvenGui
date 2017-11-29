@@ -1,5 +1,6 @@
 package states;
 
+import model.OvenModel;
 import states.OvenState;
 
 /**
@@ -8,6 +9,7 @@ import states.OvenState;
 public class OvenContext implements OvenState {
 
     private OvenState state;
+    private OvenModel ovenModel;
 
     public void setState(OvenState state){
         this.state = state;
@@ -18,12 +20,12 @@ public class OvenContext implements OvenState {
     }
 
     @Override
-    public void doAction() {
-        this.state.doAction();
+    public void doAction(OvenModel om) {
+        this.state.doAction(om);
     }
 
     @Override
-    public void door() {
-
+    public void door(OvenModel om) {
+        this.state.door(om);
     }
 }

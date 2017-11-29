@@ -3,6 +3,7 @@ package controller;
 import com.company.OvenEvent;
 import controller.OvenController;
 import model.OvenModel;
+import states.OvenContext;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,6 +15,8 @@ import java.awt.event.ActionListener;
 public class StatePatternBasedController implements OvenController {
 
     private OvenModel ovenModel;
+    private OvenContext context;
+
     public void handleEvent(final OvenEvent event) {
         switch(event){
             case DOOR:
@@ -48,6 +51,9 @@ public class StatePatternBasedController implements OvenController {
 
     public void setModel(OvenModel model) {
         this.ovenModel = model;
+    }
+    public void setContext(OvenContext context) {
+        this.context = context;
     }
 }
 
