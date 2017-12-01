@@ -6,10 +6,14 @@ import states.OvenState;
 /**
  * Created by Marcel on 27.11.2017.
  */
-public class OvenContext implements OvenState {
+public class OvenContext {
 
     private OvenState state;
     private OvenModel ovenModel;
+
+    public OvenContext(OvenModel oven){
+        setState(new OvenIdleState(this));
+    }
 
     public void setState(OvenState state){
         this.state = state;
@@ -19,13 +23,12 @@ public class OvenContext implements OvenState {
         return this.state;
     }
 
-    @Override
-    public void doAction(OvenModel om) {
-        this.state.doAction(om);
+    public void start(){
+
     }
 
-    @Override
-    public void door(OvenModel om) {
-        this.state.door(om);
+    public void door(){
+
     }
+
 }

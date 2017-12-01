@@ -2,17 +2,24 @@ package states;
 
 import model.OvenModel;
 
+
 /**
  * Created by Marcel on 27.11.2017.
  */
 public class OvenIdleState implements OvenState {
-    @Override
-    public void doAction(OvenModel om) {
 
+    // Reference to context
+    private OvenContext context;
+
+    public OvenIdleState(OvenContext context){
+        this.context = context;
     }
 
     @Override
-    public void door(OvenModel om) {
+    public void doAction(OvenContext oontext) {
+    }
 
+    @Override
+    public void door(OvenContext oontext) {
     }
 }

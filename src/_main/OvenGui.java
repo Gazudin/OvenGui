@@ -17,7 +17,7 @@ public class OvenGui {
         OvenModel oven = new Oven();
         //controller = new GeradeausController();
         controller = new StatePatternBasedController();
-        OvenContext context = new OvenContext();
+        OvenContext context = new OvenContext(oven);
         JFrame mainWin = new OvenView(controller);
         controller.setModel(oven);
         controller.setContext(context);
