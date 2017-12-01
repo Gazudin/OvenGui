@@ -1,6 +1,7 @@
 package controller;
 
 import com.company.OvenEvent;
+import model.Oven;
 import model.OvenModel;
 
 import javax.swing.*;
@@ -48,5 +49,19 @@ public class GeradeausController implements OvenController {
         this.ovenModel = model;
     }
 
+    @Override
+    public void setModel(Oven model) {
+
+    }
+
+    @Override
+    public void handleStart() {
+
+    }
+
+    @Override
+    public void handleDoor() {
+
+    }
 }
 

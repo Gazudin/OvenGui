@@ -19,8 +19,10 @@ public class OvenView extends JFrame implements OvenModelObserver {
     private final JButton door = new JButton();
     private final JButton tube = new JButton();
     private final JButton lamp = new JButton();
-    private final ImageIcon openImage = new ImageIcon("closed.gif");
-    private final ImageIcon closedImage = new ImageIcon("open.gif");
+    private final ImageIcon openImage = new ImageIcon("ovenopen.png");
+    private final ImageIcon closedImage = new ImageIcon("heatingoven.png");
+    private final ImageIcon idleImage = new ImageIcon("ovenidle.png");
+
 
     public OvenView(final OvenController controller) {
         this.controller = controller;

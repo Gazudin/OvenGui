@@ -13,7 +13,7 @@ public class OvenGui {
 
     public static void main(String[] args) {
         OvenController controller;
-        OvenModel oven = new Oven();
+        Oven oven = new Oven();
         //controller = new GeradeausController();
         controller = new StatePatternBasedController();
         JFrame mainWin = new OvenView(controller);
