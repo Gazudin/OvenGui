@@ -20,6 +20,7 @@ public class OvenHeatingState implements OvenState {
     @Override
     public void start(Oven oven) {
         oven.setHeating(false);
+        oven.setImageIcon(oven.getIdleIcon());
         oven.setState(oven.getIdleState());
     }
 
@@ -27,6 +28,7 @@ public class OvenHeatingState implements OvenState {
     public void door(Oven oven) {
         oven.setHeating(false);
         oven.setLamp(true);
+        oven.setImageIcon(oven.getOpenIcon());
         oven.setState(oven.getOpenState());
     }
 }

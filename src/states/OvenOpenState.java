@@ -23,6 +23,7 @@ public class OvenOpenState implements OvenState {
     public void door(Oven oven) {
         oven.setDoor(false);
         oven.setLamp(false);
+        oven.setImageIcon(oven.getIdleIcon());
         oven.setState(oven.getIdleState());
     }
 }

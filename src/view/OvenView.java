@@ -1,8 +1,7 @@
 package view;
 
 import controller.OvenController;
-import com.company.OvenEvent;
-import model.OvenModel;
+import model.Oven;
 import com.company.OvenModelObserver;
 
 import javax.swing.*;
@@ -19,8 +18,7 @@ public class OvenView extends JFrame implements OvenModelObserver {
     private final JButton door = new JButton();
     private final JButton tube = new JButton();
     private final JButton lamp = new JButton();
-    private final ImageIcon openImage = new ImageIcon("ovenopen.png");
-    private final ImageIcon closedImage = new ImageIcon("heatingoven.png");
+
     private final ImageIcon idleImage = new ImageIcon("ovenidle.png");
 
 
@@ -29,10 +27,11 @@ public class OvenView extends JFrame implements OvenModelObserver {
         initComponents();
         pack();
     }
-    public void update(final OvenModel model) {
+    public void update(final Oven model) {
         lamp.setBackground(model.isLampOn() ? Color.YELLOW : Color.WHITE);
-        door.setIcon(model.isDoorOpen() ? closedImage : openImage);
+        //door.setIcon(model.isDoorOpen() ? idleImage : openImage);
         tube.setBackground(model.isHeating() ? Color.RED : Color.GREEN);
+        door.setIcon(model.getCurrentIcon());
     }
     private void initComponents() {
         tube.setText("R ö h r e");
@@ -59,7 +58,7 @@ public class OvenView extends JFrame implements OvenModelObserver {
                 controller.handleDoor();
             }
         });
-        door.setIcon(closedImage);
+        door.setIcon(idleImage);
         return mainPanel;
     }
 }
