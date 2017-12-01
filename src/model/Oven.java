@@ -19,7 +19,6 @@ public class Oven implements OvenModel {
     private boolean isOpen;
     private boolean lampOn;
     private final List<OvenModelObserver> observers = new ArrayList<OvenModelObserver>();
-    private ImageIcon icon;
 
     // States
     private OvenState currentState;
@@ -27,7 +26,7 @@ public class Oven implements OvenModel {
     private OvenState heatingState;
     private OvenState openState;
 
-    // Images
+    // ImageIcons
     private ImageIcon currentIcon;
     private final ImageIcon idleIcon = new ImageIcon("ovenidle.png");
     private final ImageIcon openIcon = new ImageIcon("ovenopen.png");

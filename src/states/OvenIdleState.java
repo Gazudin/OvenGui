@@ -21,17 +21,17 @@ public class OvenIdleState implements OvenState {
 
     @Override
     public void start(Oven oven) {
-        oven.setLamp(true);
-        oven.setHeating(true);
         oven.setImageIcon(oven.getHeatingIcon());
         oven.setState(oven.getHeatingState());
+        oven.setLamp(true);
+        oven.setHeating(true);
         Timer timer = new Timer(6000, new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
                 //handleEvent(OvenEvent.STOP);
-                oven.setLamp(false);
-                oven.setHeating(false);
                 oven.setImageIcon(oven.getIdleIcon());
                 oven.setState(oven.getIdleState());
+                oven.setLamp(false);
+                oven.setHeating(false);
             }
         });
         timer.start();
@@ -39,10 +39,10 @@ public class OvenIdleState implements OvenState {
 
     @Override
     public void door(Oven oven) {
+        oven.setImageIcon(oven.getOpenIcon());
+        oven.setState(oven.getOpenState());
         oven.setLamp(true);
         oven.setHeating(false);
         oven.setDoor(true);
-        oven.setImageIcon(oven.getOpenIcon());
-        oven.setState(oven.getOpenState());
     }
 }
