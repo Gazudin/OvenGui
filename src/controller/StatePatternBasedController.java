@@ -9,7 +9,6 @@ public class StatePatternBasedController implements OvenController {
 
     private Oven ovenModel;
 
-
     public void handleStart() {
         ovenModel.getState().start(ovenModel);
     }
