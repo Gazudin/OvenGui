@@ -47,11 +47,13 @@ public class OvenView extends JFrame implements OvenModelObserver {
         mainPanel.add(door);
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
+                //controller.handleEvent();
                 controller.handleEvent(OvenEvent.START);
             }
         });
         door.addActionListener(new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
+                //controller.handleEvent();
                 controller.handleEvent(OvenEvent.DOOR);
             }
         });

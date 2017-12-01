@@ -5,7 +5,7 @@ import model.OvenModel;
 /**
  * Created by Marcel on 27.11.2017.
  */
-public class OvenActiveState implements OvenState {
+public class OvenHeatingState implements OvenState {
 
     @Override
     public void doAction(OvenModel om) {

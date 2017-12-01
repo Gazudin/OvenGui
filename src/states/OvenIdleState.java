@@ -5,7 +5,7 @@ import model.OvenModel;
 /**
  * Created by Marcel on 27.11.2017.
  */
-public class OvenClosedState implements OvenState {
+public class OvenIdleState implements OvenState {
     @Override
     public void doAction(OvenModel om) {
 
