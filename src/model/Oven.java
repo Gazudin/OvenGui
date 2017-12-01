@@ -1,8 +1,9 @@
 package model;
 
 import com.company.OvenModelObserver;
-import model.OvenModel;
+import states.OvenHeatingState;
 import states.OvenIdleState;
+import states.OvenOpenState;
 import states.OvenState;
 
 import java.util.ArrayList;
@@ -16,27 +17,46 @@ public class Oven implements OvenModel {
     private boolean isOpen;
     private boolean lampOn;
     private final List<OvenModelObserver> observers = new ArrayList<OvenModelObserver>();
-    private OvenState state;
 
+    // States
+    private OvenState currentState;
+    private OvenState idleState;
+    private OvenState heatingState;
+    private OvenState openState;
 
+    // Set starting State
     public Oven(){
-        setState(new OvenIdleState(this));
+        idleState = new OvenIdleState(this);
+        heatingState = new OvenHeatingState(this);
+        openState = new OvenOpenState(this);
+        setState(idleState);
     }
 
     public void setState(OvenState state){
-        this.state = state;
+        this.currentState = state;
     }
 
     public OvenState getState(){
-        return this.state;
+        return this.currentState;
+    }
+
+    // State Getters
+    public OvenState getIdleState(){
+        return idleState;
+    }
+    public OvenState getHeatingState(){
+        return heatingState;
+    }
+    public OvenState getOpenState(){
+        return openState;
     }
 
     public void start(){
-
+        getState().start(this);
     }
 
     public void door(){
-
+        getState().door(this);
     }
 
 

@@ -21,6 +21,8 @@ public class OvenOpenState implements OvenState {
 
     @Override
     public void door(Oven oven) {
-
+        oven.setDoor(false);
+        oven.setLamp(false);
+        oven.setState(oven.getIdleState());
     }
 }

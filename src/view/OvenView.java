@@ -48,13 +48,13 @@ public class OvenView extends JFrame implements OvenModelObserver {
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
                 //controller.handleEvent();
-                controller.handleEvent(OvenEvent.START);
+                controller.handleStart();
             }
         });
         door.addActionListener(new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
                 //controller.handleEvent();
-                controller.handleEvent(OvenEvent.DOOR);
+                controller.handleDoor();
             }
         });
         door.setIcon(closedImage);
