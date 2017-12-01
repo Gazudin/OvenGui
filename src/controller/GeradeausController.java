@@ -1,9 +1,7 @@
 package controller;
 
 import com.company.OvenEvent;
-import controller.OvenController;
 import model.OvenModel;
-import states.OvenContext;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -50,9 +48,5 @@ public class GeradeausController implements OvenController {
         this.ovenModel = model;
     }
 
-    @Override
-    public void setContext(OvenContext context) {
-
-    }
 }
 

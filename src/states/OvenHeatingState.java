@@ -1,5 +1,6 @@
 package states;
 
+import model.Oven;
 import model.OvenModel;
 
 import javax.naming.Context;
@@ -10,19 +11,19 @@ import javax.naming.Context;
 public class OvenHeatingState implements OvenState {
 
     // Reference to context
-    private OvenContext context;
+    private Oven oven;
 
-    public OvenHeatingState(OvenContext context){
-        this.context = context;
+    public OvenHeatingState(Oven oven){
+        this.oven = oven;
     }
 
     @Override
-    public void doAction(OvenContext oontext) {
+    public void start(Oven oven) {
 
     }
 
     @Override
-    public void door(OvenContext oontext) {
+    public void door(Oven oven) {
 
     }
 }

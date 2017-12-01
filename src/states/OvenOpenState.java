@@ -1,6 +1,6 @@
 package states;
 
-import model.OvenModel;
+import model.Oven;
 
 /**
  * Created by Marcel on 27.11.2017.
@@ -8,19 +8,19 @@ import model.OvenModel;
 public class OvenOpenState implements OvenState {
 
     // Reference to context
-    private OvenContext context;
+    private Oven oven;
 
-    public OvenOpenState(OvenContext context){
-        this.context = context;
+    public OvenOpenState(Oven oven){
+        this.oven = oven;
     }
 
     @Override
-    public void doAction(OvenContext oontext) {
+    public void start(Oven oven) {
 
     }
 
     @Override
-    public void door(OvenContext oontext) {
+    public void door(Oven oven) {
 
     }
 }
