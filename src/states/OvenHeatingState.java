@@ -19,11 +19,14 @@ public class OvenHeatingState implements OvenState {
 
     @Override
     public void start(Oven oven) {
-
+        oven.setHeating(false);
+        oven.setState(oven.getIdleState());
     }
 
     @Override
     public void door(Oven oven) {
-
+        oven.setHeating(false);
+        oven.setLamp(true);
+        oven.setState(oven.getOpenState());
     }
 }

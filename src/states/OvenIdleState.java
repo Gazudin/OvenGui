@@ -23,6 +23,7 @@ public class OvenIdleState implements OvenState {
     public void start(Oven oven) {
         oven.setLamp(true);
         oven.setHeating(true);
+        oven.setState(oven.getHeatingState());
         Timer timer = new Timer(6000, new ActionListener() {
             public void actionPerformed(final ActionEvent e) {
                 //handleEvent(OvenEvent.STOP);
