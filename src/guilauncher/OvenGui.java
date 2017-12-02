@@ -1,4 +1,4 @@
-package _main;
+package guilauncher;
 
 import model.Oven;
 import com.company.OvenModelObserver;
